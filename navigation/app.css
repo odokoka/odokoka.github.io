@@ -1,0 +1,138 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: black;
+}
+.body-text {
+    display: flex;
+    font-family: "Brandon Grotesque", sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px;
+    color: white;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    font-family: "Montserrat", sans-serif;
+}
+.heading {
+    margin: .5rem;
+    font-family: "Bebas Neue", sans-serif;
+    color: rgba(255, 255, 255, 0.877);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 100px;
+}
+.heading:hover {
+    color: rgba(255, 255, 255);
+    cursor: pointer;
+}
+.nav-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.nav-links li {
+    list-style: none;
+}
+
+::selection {
+    color: black;
+    background-color: white;
+    
+}
+/* blinking light animation with javascript */
+.nav-links a{
+    color: rgba(255, 255, 255, 0.800);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 14px 16px;
+    transition: color .15s;
+    display: block;
+}
+.nav-links li a:hover {
+    color: white;
+}
+.nav-links li a.active {
+    color: white;
+}
+.nav-links a.contact:hover{
+    color: red;
+}
+.nav-links a.contact {
+    color: rgba(255, 0, 0, 0.800);
+}
+.nav-links a.activecontact {
+    color: red;
+}
+.nav-links a.activecontact:hover {
+    color: red;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+@media (max-width: 1200px) {
+    @keyframes example {
+        from {opacity: 0%;}
+        to {opacity: 100%;}
+      }
+    @keyframes example2 {
+        0% {opacity: 100%;}
+        99.99% {opacity: 0%;}
+        100% {display: none;}
+      }
+    .toggle-button {
+        display: flex;
+    }
+    .nav-links {
+        width: 100%;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .nav-links li {
+        text-align: center;
+    }
+    .nav-links li a {
+        padding: .5rem 1rem;
+    }
+    .nav-links.active {
+        display: flex;
+        animation-name: example;
+        animation-duration: 1s;
+    }
+    .nav-links.inactive {
+        animation-name: example2;
+        animation-duration: 1s;
+        width: 100%;
+        
+    }
+    
+    
+}
