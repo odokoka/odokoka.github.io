@@ -1,11 +1,5 @@
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('nav-links')[0]
-
-toggleButton.addEventListener('click', () => {
-    if (navbarLinks.className == "nav-links active") {
-        navbarLinks.className = "nav-links inactive";
-    } else {
-        navbarLinks.className = "nav-links active";
-    }
-    
-});
+let navlinks = document.getElementById('nav-links');
+document.getElementById('toggle-button').onclick = function(){
+    console.log("Button Clicked")
+    navlinks.classList.toggle('fade');
+}

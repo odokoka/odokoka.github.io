@@ -92,7 +92,7 @@ nav {
     border-radius: 10px;
 }
 @media (max-width: 1200px) {
-    @keyframes example {
+    /*@keyframes example {
         from {opacity: 0%;}
         to {opacity: 100%;}
       }
@@ -100,8 +100,9 @@ nav {
         0% {opacity: 100%;}
         99.99% {opacity: 0%;}
         100% {display: none;}
-      }
-    .toggle-button {
+      }*/
+      /* hold command slash to comment out quickly */
+    .toggle-button { 
         display: flex;
     }
     .nav-links {
@@ -122,7 +123,7 @@ nav {
     .nav-links li a {
         padding: .5rem 1rem;
     }
-    .nav-links.active {
+    /*.nav-links.active {
         display: flex;
         animation-name: example;
         animation-duration: 1s;
@@ -130,9 +131,20 @@ nav {
     .nav-links.inactive {
         animation-name: example2;
         animation-duration: 1s;
-        width: 100%;
+        display: none;
         
-    }
-    
+    }*/
+    #nav-links {
+        opacity: 1;
+        -webkit-transition: opacity 0.3s ease-in-out;
+        -moz-transition: opacity 0.3s ease-in-out;
+        -ms-transition: opacity 0.3s ease-in-out;
+        -o-transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.3 ease-in-out;
+      }
+      #nav-links.fade {
+        opacity: 0;
+        height: 0;
+      }
     
 }
