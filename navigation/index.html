@@ -15,18 +15,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <nav>
-        <div class="heading">
-            OJO OKOKA
+        <div class="container">
+            <div class="stack" style="--stacks: 3;">
+              <span style="--index: 0;">OJO OKOKA</span>
+              <span style="--index: 1;">OJO OKOKA</span>
+              <span style="--index: 2;">OJO OKOKA</span>
+            </div>
         </div>
-        <a href="#" id="toggle-button" class="toggle-button">
+        <a href="#" id="toggle-button">
             <span class="bar"></span>            
             <span class="bar"></span>            
             <span class="bar"></span>            
         </a>
-        <div id="nav-links" class="nav-links">
+        <div id="nav-links">
             <ul>
                 <li><a class="active" href="index.html">HOME</a></li>
                 <li><a href="pages/about.html">ABOUT</a></li>
@@ -37,11 +42,29 @@
             </ul>
         </div>
     </nav>
-    <div class="body-text">
-        <h1>
-            This is the starting home page
-        </h1>
-    </div>
+    <section class="bg-video">
+        <div class="overlay">
+            <h1 class="introduction">
+                Hello, My name is Ojo!
+            </h1>
+        </div>
+        <div class="home-video">
+                <video id="intro-vid" width="1000" autoplay loop muted>
+                    <source src="/images/Who Am I YT Video.mp4" type="video/mp4" />
+                </video>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="social">
+            <a href="https://www.instagram.com/ojookoka/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/ojookoka/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/odokoka" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="pages/contact.html"><i class="fab fa-envelope"></i></a>
+        </div>
+        <p id="copyright">
+            OJO OKOKA @ 2022
+        </p>
+    </section>
 </body>
 </html>
 
